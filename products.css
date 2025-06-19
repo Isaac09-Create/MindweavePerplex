@@ -1,0 +1,66 @@
+.product-images {
+  text-align: center;
+  margin: 40px 0 30px 0;
+}
+
+.product-images h2 {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 2rem;
+  color: #0078d4;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.image-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.image-card {
+  background: linear-gradient(135deg, #1e293b 60%, #0078d4 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0, 120, 212, 0.15), 0 1.5px 8px #222;
+  padding: 18px 18px 14px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.25s, box-shadow 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-card:hover {
+  transform: scale(1.07) rotate(-2deg);
+  box-shadow: 0 8px 36px #0078d4bb, 0 2px 12px #222;
+}
+
+.image-card img {
+  width: 59px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #00cfff;
+  box-shadow: 0 0 16px #00cfff77, 0 0 4px #222;
+  background: #fff;
+  margin-bottom: 12px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.image-card:hover img {
+  border-color: #0078d4;
+  box-shadow: 0 0 32px #0078d4cc, 0 0 8px #222;
+}
+
+.image-label {
+  color: #fff;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  background: rgba(0,120,212,0.7);
+  padding: 6px 18px;
+  border-radius: 12px;
+  margin-top: 2px;
+  box-shadow: 0 1px 6px #0078d488;
+}

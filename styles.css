@@ -1,0 +1,198 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background: #0f172a; /* dark navy */
+  color: #e0e7ff; /* soft light blue */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+a {
+  color: #60a5fa; /* bright blue */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #2563eb;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #1e293b; /* darker blue-gray */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #3b82f6;
+  user-select: none;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+nav ul li a {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+nav ul li a:hover {
+  background: #2563eb;
+  color: white;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Section */
+.hero {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+.hero-content {
+  flex: 1 1 450px;
+  animation: fadeInUp 1s ease forwards;
+}
+.hero-content h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 5s ease infinite;
+}
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  color: #cbd5e1;
+  line-height: 1.5;
+  max-width: 480px;
+}
+.btn {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+.btn:hover,
+.btn:focus {
+  background: #1e40af;
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.7);
+  outline: none;
+}
+
+/* 3D Cube Container */
+.hero-3d {
+  flex: 1 1 350px;
+  perspective: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInRight 1.2s ease forwards;
+}
+.cube {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateCube 10s linear infinite;
+  cursor: grab;
+}
+.cube div {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+  border: 2px solid #2563eb;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #60a5fa;
+  opacity: 0.9;
+}
+.cube .front  { transform: translateZ(90px); }
+.cube .back   { transform: rotateY(180deg) translateZ(90px); }
+.cube .right  { transform: rotateY(90deg) translateZ(90px); }
+.cube .left   { transform: rotateY(-90deg) translateZ(90px); }
+.cube .top    { transform: rotateX(90deg) translateZ(90px); }
+.cube .bottom { transform: rotateX(-90deg) translateZ(90px); }
+
+/* Footer */
+footer {
+  background: #1e293b;
+  text-align: center;
+  padding: 18px 0;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  user-select: none;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+/* Animations */
+@keyframes rotateCube {
+  from { transform: rotateX(0deg) rotateY(0deg); }
+  to { transform: rotateX(360deg) rotateY(360deg); }
+}
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInRight {
+  0% { opacity: 0; transform: translateX(30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  .hero-content p {
+    max-width: 100%;
+  }
+  .hero-3d {
+    flex: none;
+  }
+}
