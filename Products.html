@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Products | Mindweave</title>
+  <link rel="Stylesheet" href=".css">
+  <link rel="products" href="products.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="Index.html" class="logo">🟦 Mindweave</a>
+      <ul>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Products.html" class="active">Products</a></li>
+        <li><a href="contact us.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="product-images">
+  <h2>See Our Products</h2>
+ 
+</section>
+
+    <section class="products">
+      <h2>Our Products</h2>
+      <div class="product-list">
+        <!-- Mindweave Pro -->
+        <div class="product-card accent-blue">
+          <h3>Mindweave Pro</h3>
+          <p>
+            <strong>For Knowledge Workers & Professionals</strong><br>
+            AI-powered assistant for Microsoft 365. Smart summarization, content generation, decision support, and focus tools.
+          </p>
+          <ul>
+            <li>Smart Summarization</li>
+            <li>Contextual Content Generation</li>
+            <li>Intelligent Decision Support</li>
+            <li>Personalized Info Curation</li>
+            <li>Focus Mode & Distraction Management</li>
+          </ul>
+          <p class="price">R110/mo &middot; R1100/year</p>
+          <div class="image-grid">
+    <div class="image-card">
+      <img src="pexels-thisisengineering-3861958.jpg" alt="Description" style="width: 300px; height: 200px;" alt="Mindweave Pro">
+      <span class="image-label"></span>
+    </div>
+          <a href="#tutorial-pro" class="btn">See Tutorial</a>
+        </div>
+        <br><br>
+        <!-- Mindweave Scholar -->
+        <div class="product-card accent-green">
+          <h3>Mindweave Scholar</h3>
+          <p>
+            <strong>For Students & Academics</strong><br>
+            Adaptive learning, research assistant, tutoring, and writing enhancement.
+          </p>
+          </div>
+        
+          <ul>
+            <li>Adaptive Learning Paths</li>
+            <li>Intelligent Research Assistant</li>
+            <li>Concept Clarification & Tutoring</li>
+            <li>Essay & Report Structuring</li>
+            <li>Language & Writing Enhancement</li>
+          </ul>
+          <p class="price">R180/mo &middot; R1800/year</p>
+            <div class="image-card">
+      <img src="pexels-tima-miroshnichenko-9572526.jpg" alt="Description" style="width: 300px; height: 200px;" alt="Mindweave Scholar">
+      <span class="image-label"></span>
+    </div>
+          <a href="#tutorial-scholar" class="btn">See Tutorial</a>
+        </div>
+        <!-- Mindweave Wellness -->
+        <div class="product-card accent-red">
+          <h3>Mindweave Wellness</h3>
+          <p>
+            <strong>For Personal Growth & Well-being</strong><br>
+            Cognitive fitness, mindfulness, digital detox, and mood tracking.
+          </p>
+          <ul>
+            <li>Personalized Brain Exercises</li>
+            <li>Mindfulness & Meditation Guides</li>
+            <li>Digital Detox & Focus Timer</li>
+            <li>Mood & Energy Tracking</li>
+            <li>Neurofeedback Integration</li>
+          </ul>
+          <p class="price">Free basic &middot; R120/mo Premium</p>
+           <div class="image-card">
+      <img src="pexels-artempodrez-6823406.jpg" alt="Description" style="width: 300px; height: 200px;" alt="Mindweave Wellness">
+      <span class="image-label"></span>
+    </div>
+          <a href="#tutorial-wellness" class="btn">See Tutorial</a>
+        </div>
+      </div>
+    </section>
+    <section class="tutorials">
+      <h2>Tutorials</h2>
+      <div id="tutorial-pro" class="tutorial">
+        <h3>Mindweave Pro: Getting Started</h3>
+        <ol>
+          <li>Install Mindweave Pro from Microsoft 365 Add-ins.</li>
+          <li>Open Outlook, Teams, or Word and activate Mindweave from the toolbar.</li>
+          <li>Use the AI assistant to summarize emails, generate content, and manage focus modes.</li>
+          <li>Customize your preferences for personalized info curation.</li>
+        </ol>
+      </div>
+      <div id="tutorial-scholar" class="tutorial">
+        <h3>Mindweave Scholar: How to Use</h3>
+        <ol>
+          <li>Sign up with your student or academic email.</li>
+          <li>Create a learning profile and select your courses.</li>
+          <li>Access adaptive learning paths and research tools.</li>
+          <li>Use the writing assistant for essays and reports.</li>
+        </ol>
+      </div>
+      <div id="tutorial-wellness" class="tutorial">
+        <h3>Mindweave Wellness: First Steps</h3>
+        <ol>
+          <li>Download the app on mobile or desktop.</li>
+          <li>Set your cognitive fitness and well-being goals.</li>
+          <li>Try daily brain exercises and mindfulness sessions.</li>
+          <li>Track your mood and progress with AI insights.</li>
+        </ol>
+      </div>
+    </section>
+    <section class="buy-now-cta">
+  <h2>Get Mindweave Now!</h2>
+  <div class="arrows">
+    <span class="arrow">⬇️</span>
+    <span class="arrow">⬇️</span>
+    <span class="arrow">⬇️</span>
+  </div>
+</section>
+
+<section class="discount-offer">
+  <h2>🎉 Limited Time Offer: 20% Discount!</h2>
+  <p>Hurry up! Offer expires in:</p>
+  <div id="countdown-timer">
+    <span id="minutes">05</span>:<span id="seconds">00</span>
+  </div>
+  <p class="discount-note">Use code <strong>MIND20</strong> at checkout</p>
+</section>
+
+
+   <section class="payment-method">
+  <h2>Subscribe & Pay</h2>
+  <form id="payment-form" action="/process-payment" method="POST">
+    <label for="product-select">Choose a Product:</label><br>
+    <select id="product-select" name="product" required>
+      <option value="">--Select a Product--</option>
+      <option value="mindweave-pro" data-price="110">Mindweave Pro - R110/mo or R1100/year</option>
+      <option value="mindweave-scholar" data-price="180">Mindweave Scholar - R180/mo or R1800/year</option>
+      <option value="mindweave-wellness-basic" data-price="0">Mindweave Wellness Basic - Free</option>
+      <option value="mindweave-wellness-premium" data-price="120">Mindweave Wellness Premium - R120/mo</option>
+    </select><br><br>
+
+    <!-- Discount Code Section -->
+    <label for="discount-code">Discount Code:</label><br>
+    <input type="text" id="discount-code" name="discountcode" placeholder="Enter discount code">
+    <button type="button" id="apply-discount" class="btn">Apply</button>
+    <p id="discount-message" style="color: green; font-weight: 600; margin-top: 6px;"></p>
+    <br>
+
+    <!-- Price Display -->
+    <p>Price: <span id="price-display">Please select a product</span></p>
+
+    <label for="card-name">Name on Card:</label><br>
+    <input type="text" id="card-name" name="cardname" placeholder="Full Name" required><br><br>
+
+    <label for="card-number">Card Number:</label><br>
+    <input type="text" id="card-number" name="cardnumber" placeholder="1234 5678 9012 3456" maxlength="19" required><br><br>
+
+    <label for="expiry-date">Expiry Date:</label><br>
+    <input type="month" id="expiry-date" name="expiry" required><br><br>
+
+    <label for="cvv">CVV:</label><br>
+    <input type="password" id="cvv" name="cvv" maxlength="4" placeholder="123" required><br><br>
+
+    <button type="submit" class="btn">Pay Now</button>
+  </form>
+</section>
+
+    
+  </main>
+  <footer>
+    &copy; 2025 Microsoft Mindweave. All rights reserved.
+  </footer>
+  
+  <script>
+  (function() {
+    // Total countdown time in seconds (5 minutes)
+    let timeLeft = 5 * 60;
+
+    const minutesEl = document.getElementById('minutes');
+    const secondsEl = document.getElementById('seconds');
+
+    function updateCountdown() {
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+
+      minutesEl.textContent = minutes.toString().padStart(2, '0');
+      secondsEl.textContent = seconds.toString().padStart(2, '0');
+
+      if (timeLeft > 0) {
+        timeLeft--;
+      } else {
+        clearInterval(timerInterval);
+        // Show offer expired message
+        const discountSection = document.querySelector('.discount-offer');
+        discountSection.innerHTML = `
+          <h2>⏰ Offer Expired</h2>
+          <p>But you can still subscribe at regular price.</p>
+        `;
+      }
+    }
+
+    // Initial call to display immediately
+    updateCountdown();
+
+    // Update every second
+    const timerInterval = setInterval(updateCountdown, 1000);
+  })();
+</script>
+
+<script>
+  (function() {
+    const productSelect = document.getElementById('product-select');
+    const priceDisplay = document.getElementById('price-display');
+    const discountInput = document.getElementById('discount-code');
+    const applyBtn = document.getElementById('apply-discount');
+    const discountMessage = document.getElementById('discount-message');
+
+    // Example discount codes and their discounts (20% off)
+    const discountCodes = {
+      'MIND20': 0.20,
+      'SAVE20': 0.20
+    };
+
+    let currentPrice = 0;
+    let discountedPrice = 0;
+    let discountApplied = false;
+
+    // Update price display when product changes
+    productSelect.addEventListener('change', () => {
+      discountMessage.textContent = '';
+      discountInput.value = '';
+      discountApplied = false;
+
+      const selectedOption = productSelect.options[productSelect.selectedIndex];
+      currentPrice = parseFloat(selectedOption.getAttribute('data-price')) || 0;
+
+      if (currentPrice === 0) {
+        priceDisplay.textContent = 'Free';
+      } else {
+        priceDisplay.textContent = `R${currentPrice.toFixed(2)} / month`;
+      }
+    });
+
+    // Apply discount button click
+    applyBtn.addEventListener('click', () => {
+      const code = discountInput.value.trim().toUpperCase();
+
+      if (!code) {
+        discountMessage.style.color = 'red';
+        discountMessage.textContent = 'Please enter a discount code.';
+        return;
+      }
+
+      if (!currentPrice || currentPrice === 0) {
+        discountMessage.style.color = 'red';
+        discountMessage.textContent = 'Select a paid product first.';
+        return;
+      }
+
+      if (discountCodes[code]) {
+        const discountPercent = discountCodes[code];
+        discountedPrice = currentPrice * (1 - discountPercent);
+        priceDisplay.textContent = `R${discountedPrice.toFixed(2)} / month (20% OFF!)`;
+        discountMessage.style.color = 'green';
+        discountMessage.textContent = `Discount code applied! You saved 20%.`;
+        discountApplied = true;
+      } else {
+        discountMessage.style.color = 'red';
+        discountMessage.textContent = 'Invalid discount code.';
+        discountApplied = false;
+        priceDisplay.textContent = `R${currentPrice.toFixed(2)} / month`;
+      }
+    });
+
+    // Optional: On form submit, you can add logic to send discount info to server
+    document.getElementById('payment-form').addEventListener('submit', (e) => {
+      // If you want to validate discount code again or add hidden inputs, do it here
+      // Example: add hidden input with discount code if applied
+      if (discountApplied) {
+        let hiddenInput = document.getElementById('hidden-discount-code');
+        if (!hiddenInput) {
+          hiddenInput = document.createElement('input');
+          hiddenInput.type = 'hidden';
+          hiddenInput.name = 'discountcode';
+          hiddenInput.id = 'hidden-discount-code';
+          document.getElementById('payment-form').appendChild(hiddenInput);
+        }
+        hiddenInput.value = discountInput.value.trim().toUpperCase();
+      }
+    });
+  })();
+</script>
+
+
+
+</body>
+</html>
